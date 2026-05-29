@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Deep Learning / Model Caches
+unsloth_compiled_cache/
+finetuner/unsloth_compiled_cache/
+outputs_hf_debug/
+outputs/
+finetuner/outputs/
+.continue/
+
+# Large Model Weights and GGUF Exports
+*.gguf
+finetuner/exported_model/
+finetuner/exported_model_gguf/
+
+# Logs and Outputs
+*.log
+streamlit_out.txt
+standalone_out.txt
+streamlit
+standalone_out.txt
+
+# Virtual Environments
+venv/
+.venv/
+env/
+active_env/
+
+# IDE and System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# ⚠️ PRIVATE PATIENT & ATHLETE DATA SAFETY
+# ==========================================
+# We explicitly block all files inside data directories to prevent accidental HIPAA/GDPR leaks.
+# Users can still keep directories in Git by placing an empty .gitkeep file inside them.
+inbox/*
+!inbox/.gitkeep
+processed/*
+!processed/.gitkeep
+raporty/*
+!raporty/.gitkeep
