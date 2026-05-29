@@ -60,25 +60,28 @@
    pip install -r requirements.txt
    ```
 
-3. *(Optional)* **Install Unsloth for Local Fine-Tuning:**
-   Follow the official [Unsloth Windows installation guide](https://github.com/unslothai/unsloth#windows-installation) to configure PyTorch CUDA and the Unsloth engine.
+3. *(Optional)* **Deep Learning & Fine-Tuning Engines:**
+   * **Windows/Linux (with Nvidia GPUs):** Follow the official [Unsloth Windows installation guide](https://github.com/unslothai/unsloth#windows-installation) to configure PyTorch CUDA and the ultra-fast Unsloth engine.
+   * **macOS (Apple Silicon):** Unsloth is optimized for Nvidia CUDA. On macOS, choose the **"Stable HF PEFT"** engine in the training settings! This utilizes Apple Silicon's native GPU acceleration (MPS) for stable local training without any complex compilation setup.
 
 ---
 
 ## 🏃 Uruchamianie (Execution)
 
-### Option A: Native Desktop Mode (Recommended for Windows)
-Simply double-click the **`Uruchom_Kinesiology_Analyzer.vbs`** file in the root directory. 
-* This launches a silent background Streamlit server and opens a beautiful, native desktop application window with a sophisticated painted loading splash screen.
+### 🪟 Windows Execution
+* **Option A: Native Desktop Mode (Recommended)** - Simply double-click the **`Uruchom_Kinesiology_Analyzer.vbs`** file in the root directory. This launches a silent background Streamlit server and opens a beautiful, native PySide6 desktop window with an elegant loading splash screen.
+* **Option B: Debug Mode** - Double-click **`run_debug.bat`** to run the native desktop wrapper in a visible console shell to easily view logs and troubleshoot.
 
-### Option B: Standard Web Mode
-Run the Streamlit application directly from your terminal:
-```bash
-streamlit run pdf_parser_trainer.py
-```
-
-### Option C: Debug Mode
-Double-click **`run_debug.bat`** to run the native PySide6 desktop wrapper in a visible console shell to easily view logs and debug errors.
+### 🍎 macOS & 🐧 Linux Execution
+* **Option A: Native Desktop Mode** - Open your terminal, navigate to the project directory, and run the following commands to make the launcher script executable and boot the native PySide6 desktop application window:
+  ```bash
+  chmod +x run_mac.sh
+  ./run_mac.sh
+  ```
+* **Option B: Standard Web Mode (Any Platform)** - Run the Streamlit server directly to open the application in your default web browser:
+  ```bash
+  streamlit run pdf_parser_trainer.py
+  ```
 
 ---
 
