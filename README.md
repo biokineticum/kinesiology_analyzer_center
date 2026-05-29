@@ -55,7 +55,19 @@
    cd kinesiology-analyzer-center
    ```
 
-2. **Install Core Requirements:**
+2. **Create and Activate a Virtual Environment (Recommended):**
+   * **Windows:**
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   * **macOS / Linux:**
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+3. **Install Core Requirements:**
    ```bash
    pip install -r requirements.txt
    ```
